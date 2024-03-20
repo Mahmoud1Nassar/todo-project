@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Company Todo List</h1>
+        <a href="index.html">Home</a>
+        <a href="todolist.html">Tasks Page</a>
+    </nav>
+    <div class="todo-container">
+        <h1>Todo List</h1>
+        <input type="text" id="taskInput" placeholder="Enter task...">
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="deleteCheckedTasks()">Delete</button>
+        <button onclick="selectAll()">Select All</button>
+        <table id="taskTable"> 
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p> Copyright © 2024 All Rights Reserved.</p>
+    </footer>
+   
+</body>
+<script src="app.js"></script> 
+</html>

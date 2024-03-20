@@ -1,88 +1,186 @@
-/* Reset default styles */
-* {
+
+
+
+body, h1, h2, ul, li, input, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
+
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/* Header styles */
-header {
+/* Navbar styles */
+.navbar {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
-}
-
-header nav ul {
-    list-style: none;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
+    
 }
 
-header nav ul li {
-    margin-right: 10px;
-}
-
-header nav ul li button {
-    background-color: transparent;
-    border: none;
+.navbar h1 {
+    margin: 0;
     color: #fff;
+    flex: 1;
+    display: inline-block;
+    
+}
+
+
+.navbar a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+    display: inline-block;
+   
+}
+
+/* Employee info styles */
+.employee-info {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.employee-info h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.employee-info input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Todo container styles */
+.todo-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: auto;
+    max-width: 1000px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.todo-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.todo-container input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.todo-container button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-/* Main styles */
-main {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+/* Task list styles */
+#taskList {
+    list-style-type: none;
+    padding: 0;
 }
 
-main > div {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+#taskList li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
-main > div img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+#taskList li:last-child {
+    border-bottom: none;
 }
 
-h2 {
+/* Checkbox styles */
+#taskList li input[type="checkbox"] {
+    margin-right: 10px;
+    -webkit-appearance: none; /* Remove default appearance */
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#taskList li input[type="checkbox"]:checked::before {
+    content: "\2713"; /* Checkmark symbol */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
     color: #333;
-    margin-bottom: 10px;
+    background-color: #ccc;
+    border-radius: 3px;
 }
 
-table {
+/* Task table styles */
+#taskTable {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-table td, table th {
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-table th {
-    background-color: #f2f2f2;
-}
-
-/* Footer styles */
-footer {
-    text-align: center;
     margin-top: 20px;
-    padding: 10px 0;
+}
+
+#taskTable th,
+#taskTable td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+#taskTable th:nth-child(2),
+#taskTable td:nth-child(2) {
+    text-align: center;
+}
+
+/* Checkbox styles */
+#taskTable td input[type="checkbox"] {
+    margin: 0 auto;
+    display: block;
+}
+
+footer {
     background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Header link styles */
+.navbar a.home {
+    color: #fff;
+}
+
+.navbar a.tasks {
     color: #fff;
 }
