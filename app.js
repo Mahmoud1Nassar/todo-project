@@ -58,13 +58,13 @@ function getUserInput () {
     let age = parseInt(prompt ("Enter your Age"));
     answers.push(age > 0 ? age : "invalid");
 
-    let q1 = prompt("Do you like programming? (Yes/No)").toLowerCase;
+    let q1 = prompt("Do you like programming? (Yes/No)");
     answers.push(q1 || "invalid");
 
-    let q2 = prompt("Do you enjoy outdoor activities? (Yes/No)").toLowerCase;
+    let q2 = prompt("Do you enjoy outdoor activities? (Yes/No)");
     answers.push(q2 || "invalid");
 
-    let q3 = prompt("Are you vegatarian? (Yes/No)").toLowerCase;
+    let q3 = prompt("Are you vegatarian? (Yes/No)");
     answers.push(q3 || "invalid");
 
     console.log("User Answers:")
