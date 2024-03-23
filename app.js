@@ -51,31 +51,6 @@ function selectAll() {
 
 
 
-let name = prompt("Please enter your name:");
 
 
-let gender = prompt("Please enter your gender (male or female):").toLowerCase();
 
-if (gender !== "male" && gender !== "female") {
-    alert("Invalid gender input!");
-} else {
-
-    let age = parseInt(prompt("Please enter your age:"));
-
-    if (age <= 0) {
-        alert("Age must be greater than zero!");
-    } else {
-    
-        let skipMessage = confirm("Do you want to skip the welcoming message?");
-
-        let greeting;
-        if (!skipMessage) {
-            if (gender === "male") {
-                greeting = "Welcome, Mr. " + name + "!";
-            } else if (gender === "female") {
-                greeting = "Welcome, Ms. " + name + "!";
-            }
-            alert(greeting);
-        }
-    }
-}
